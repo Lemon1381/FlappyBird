@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public int points;
     public int power;
     public Text playerPoints;
+    public GameObject menu;
 
     void Update()
     {
@@ -25,8 +26,10 @@ public class Player : MonoBehaviour
         {
             PlayerPrefs.SetInt("Score", points);
         }
-        //PlayerPrefs.DeleteKey("Score");
+        //PlayerPrefs.DeleteKey("Score");;
         Destroy(gameObject);
+        Time.timeScale = 0;
+        menu.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D other)

@@ -6,6 +6,7 @@ public class Button : MonoBehaviour
 {
     void OnMouseDown()
     {
+        Time.timeScale = 1;
         Application.LoadLevel("Main");
     }
 }
